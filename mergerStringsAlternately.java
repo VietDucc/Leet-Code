@@ -38,14 +38,15 @@ word1 and word2 consist of lowercase English letters.
  */
 class Solution {
     public String mergeAlternately(String word1, String word2) {
-         StringBuilder result = new StringBuilder();
+        StringBuilder result = new StringBuilder();
         int maxLength = Math.max(word1.length(), word2.length());
-        for(int i = 0; i < maxLength; i++){
-            if(i < word1.length()) 
+        for (int i = 0; i < maxLength; i++) {
+            if (i < word1.length())
                 result.append(word1.charAt(i));
-            if(i < word2.length()) 
+            if (i < word2.length())
                 result.append(word2.charAt(i));
         }
-        return result.toString();
+        return result.toString(); // Return the merged string, because StringBuilder is not a string, we need to
+                                  // convert it to string to print it.
     }
 }
