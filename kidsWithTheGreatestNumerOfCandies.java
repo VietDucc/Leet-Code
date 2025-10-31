@@ -45,7 +45,7 @@ class Solution {
         }
 
         for (int c : candies) {
-            result.add(c + extraCandies >= maxCandies);
+            result.add(c + extraCandies >= maxCandies); // add(c + extraCandies >= maxCandies);
         }
         return result;
     }
